@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'homescreen.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
                       // الانتقال إلى صفحة ثانية
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) =>  HomeScreen()),
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
