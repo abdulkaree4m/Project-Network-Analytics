@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
         decoration:  BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("Imag/imag8.jpg"), //  مسار الصورة هنا
+            image: AssetImage("assets/imag8.jpg"), //  مسار الصورة هنا
             fit: BoxFit.cover, //  تغطي الشاشة كاملة
           ),
         ),
