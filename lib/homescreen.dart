@@ -43,9 +43,43 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            // البطاقات الرئيسية
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 3,//الاعمدة
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                padding: const EdgeInsets.all(16),
+                children: [
+                  _buildMainCard(
+                    context,
+                    "الأدوات",
+                    Icons.build,
+                    const ToolsPage(),
+                  ),
+                  _buildMainCard(
+                    context,
+                    "التنبيهات",
+                    Icons.notifications,
+                    const SimplePage(title: "التنبيهات"),
+                  ),
+                  _buildMainCard(
+                    context,
+                    "الإعدادات",
+                    Icons.settings,
+                    const SimplePage(title: "الإعدادات"),
+                  ),
+                ],
+              ),
+            ),
           ],
         )),
       ),
     );
   }
+  /// دالة إنشاء البطاقات
+  
 }
+
+
