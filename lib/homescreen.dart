@@ -5,15 +5,46 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      body: Container(
+
+    );
+  }
+
+  /// دالة إنشاء البطاقات
+  Widget _buildMainCard(BuildContext context, String title, IconData icon, Widget page) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) => page));
+      },
+      child: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/imag8.jpg"), //  مسار الصورة هنا
-            fit: BoxFit.cover,
-          ),
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.greenAccent, width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.greenAccent,
+              blurRadius: 10,
+              spreadRadius: 2,
+            ),
+          ],
         ),
-        child: SafeArea(child: Column()),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, color: Colors.greenAccent, size: 50),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: const TextStyle(
+                color: Colors.greenAccent,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
